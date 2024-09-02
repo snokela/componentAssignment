@@ -1,10 +1,14 @@
-function App() {
+import headerImg from './assets/headerImg.png';
+import Header from './components/Header';
 
-  return (
+
+function App() {
+return (
     <div>
+      <Header image={headerImg} title={'Welcome to product page!'}/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 
