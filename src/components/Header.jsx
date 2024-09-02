@@ -1,6 +1,8 @@
+import '../styles/App.css';
+
 function Header({ image, title }) {
   return (
-    <div>
+    <div className='content'>
       <img src={image} alt="Header image" />
       <h1>{title}</h1>
     </div>

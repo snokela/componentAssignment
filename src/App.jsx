@@ -1,7 +1,6 @@
 import headerImg from './assets/headerImg.png';
 import Header from './components/Header';
 
-
 function App() {
 return (
     <div>
