@@ -4,5 +4,5 @@ function Header({ image, title }) {
       <img src={image} />
       <h1>{title}</h1>
     </div>
-  )
+  );
 }
