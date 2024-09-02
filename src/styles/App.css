@@ -4,3 +4,11 @@
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.header-img {
+  border-radius: 50%;
+  margin: 30px;
+  border: 4px solid black;
+  height: auto;
+  width: 8%;
+}
