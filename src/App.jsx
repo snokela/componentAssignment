@@ -9,9 +9,9 @@ function App() {
   const [selectedProductId, setSelectedProductId] = useState('');
 
   const products = [
-    { id: 1, name: 'Smaak' },
-    { id: 2, name: 'Royal Canin' },
-    { id: 3, name: 'Orijen' },
+    { id: 1, name: 'Smaak', size: 6 },
+    { id: 2, name: 'Royal Canin', size:6},
+    { id: 3, name: 'Orijen', size:7 },
   ]
 
   const selectedProduct = (products.find(product => product.id === selectedProductId)).name

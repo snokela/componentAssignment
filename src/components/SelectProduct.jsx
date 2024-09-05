@@ -19,7 +19,7 @@ function SelectProduct({ products, productsPrice, selectedProductId, setSelected
           >
             {products.map(product => (
               <option key={product.id} value={product.id}>
-                {product.name} - ({getPrice(product.id)} €)
+                {product.name} {product.size}kg - ({getPrice(product.id)} €)
               </option>
             ))}
           </select>
