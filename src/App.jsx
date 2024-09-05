@@ -8,8 +8,8 @@ function App() {
 
   const [selectedProductId, setSelectedProductId] = useState(0);
 
-  const productsName = ['Smaak', 'Royal Canin', 'Orijen', 'Acana',  'Pedigree']
-  const productsPrices = ['38', '51', '48', '55',  '30' ]
+  const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana',  'Pedigree']
+  const productPrices = ['38', '51', '48', '55',  '30' ]
 
   // const selectedProduct = products.find(product => product.id === selectedProductId);
   // const productName = selectedProduct ? selectedProduct.name : 'Tuntematon tuote';
@@ -23,8 +23,8 @@ return (
        title={'Welcome to product page!'}
       />
       <SelectProduct
-        products={productsName}
-        productsPrice={productsPrices}
+        productNames={productNames}
+        productPrices={productPrices}
         selectedProductId={selectedProductId}
         setSelectedProductId={setSelectedProductId}
       />

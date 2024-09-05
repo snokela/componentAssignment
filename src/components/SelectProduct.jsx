@@ -1,12 +1,12 @@
 import '../styles/App.css';
 
-function SelectProduct({ products, productsPrice, selectedProductId, setSelectedProductId }) {
+function SelectProduct({ productNames, productPrices, selectedProductId, setSelectedProductId }) {
 
   //haetaan tuotteen hinta productsPrice-listasta id:tä hyödyntäen, jotta voidaan näyttää se dropdownissa tuotteen perässä
-  const getPrice= (id) => {
-    const productPrice = productsPrice.find(product => product.id === id);
-    return productPrice ? productPrice.price : 'Ei hintaa';
-  };
+  // const getPrice= (id) => {
+  //   const productPrice = productsPrice.find(product => product.id === id);
+  //   return productPrice ? productPrice.price : 'Ei hintaa';
+  // };
 
   return (
     <div className='content'>
@@ -17,9 +17,9 @@ function SelectProduct({ products, productsPrice, selectedProductId, setSelected
             value={selectedProductId}
             onChange={(e) => setSelectedProductId(parseInt(e.target.value))}
           >
-            {products.map(product => (
-              <option key={product.id} value={product.id}>
-                {product.name} {product.size}kg - ({getPrice(product.id)} €)
+            {productNames.map((name, index )=> (
+              <option key={index} value={index}>
+                {name} - ({productPrices[index]} €)
               </option>
             ))}
           </select>
