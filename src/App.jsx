@@ -14,7 +14,8 @@ function App() {
     { id: 3, name: 'Orijen' },
   ]
 
-  // console.log(products[selectedProduct].name)
+  const selectedProduct = (products.find(product => product.id === selectedProductId)).name
+  // console.log(selectedProduct)
 
   const productsPrice = [
     { id: 1, price: '42' },
