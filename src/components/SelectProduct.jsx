@@ -1,6 +1,6 @@
 import '../styles/App.css';
 
-function SelectProduct({ products, productsPrice, selectedProduct, setSelectedProduct }) {
+function SelectProduct({ products, productsPrice, selectedProductId, setSelectedProductId }) {
 
   //haetaan tuotteen hinta productsPrice-listasta id:tä hyödyntäen, jotta voidaan näyttää se dropdownissa tuotteen perässä
   const getPrice= (id) => {
@@ -15,8 +15,8 @@ function SelectProduct({ products, productsPrice, selectedProduct, setSelectedPr
         <div>
           <select
             className='product-select'
-            value={selectedProduct}
-            onChange={(e) => setSelectedProduct(e.target.value)}
+            value={selectedProductId}
+            onChange={(e) => setSelectedProductId(parseInt(e.target.value))}
           >
             {products.map(product => (
               <option key={product.id} value={product.id}>

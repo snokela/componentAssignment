@@ -6,13 +6,15 @@ import SelectProduct from './components/SelectProduct';
 
 function App() {
 
-  const [selectedProduct, setSelectedProduct] = useState('');
+  const [selectedProductId, setSelectedProductId] = useState('');
 
   const products = [
     { id: 1, name: 'Smaak' },
     { id: 2, name: 'Royal Canin' },
     { id: 3, name: 'Orijen' },
   ]
+
+  // console.log(products[selectedProduct].name)
 
   const productsPrice = [
     { id: 1, price: '42' },
@@ -29,8 +31,8 @@ return (
       <SelectProduct
         products={products}
         productsPrice={productsPrice}
-        selectedProduct={selectedProduct}
-        setSelectedProduct={setSelectedProduct}
+        selectedProductId={selectedProductId}
+        setSelectedProductId={setSelectedProductId}
       />
     </div>
   );
