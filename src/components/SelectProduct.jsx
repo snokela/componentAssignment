@@ -1,12 +1,12 @@
 import '../styles/App.css';
 
-function SelectProduct() {
+function SelectProduct({ products }) {
 
-  const products = [
-    { id: 1, name: 'Smaak' },
-    { id: 2, name: 'Royal Canin' },
-    { id: 3, name: 'Orijen' },
-  ]
+  // const products = [
+  //   { id: 1, name: 'Smaak' },
+  //   { id: 2, name: 'Royal Canin' },
+  //   { id: 3, name: 'Orijen' },
+  // ]
 
   const productsPrice = [
     { id: 1, price: '42' },
