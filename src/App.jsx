@@ -6,6 +6,8 @@ import SelectProduct from './components/SelectProduct';
 
 function App() {
 
+  const [selectedProduct, setSelectedProduct] = useState('');
+
   const products = [
     { id: 1, name: 'Smaak' },
     { id: 2, name: 'Royal Canin' },
@@ -20,8 +22,16 @@ function App() {
 
 return (
     <div>
-      <Header image={headerImg} title={'Welcome to product page!'}/>
-      <SelectProduct  products={products} productsPrice={productsPrice} />
+      <Header
+       image={headerImg}
+       title={'Welcome to product page!'}
+      />
+      <SelectProduct
+        products={products}
+        productsPrice={productsPrice}
+        selectedProduct={selectedProduct}
+        setSelectedProduct={setSelectedProduct}
+      />
     </div>
   );
 }
