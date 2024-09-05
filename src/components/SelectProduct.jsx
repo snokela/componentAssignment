@@ -10,10 +10,10 @@ function SelectProduct() {
 
   return (
     <div className='content'>
-      <div>
-        <label>Product:</label>
+      <div className='product-select-row'>
+        <label className='product-select-label'>Product:</label>
         <div>
-          <select >
+          <select className='product-select'>
             {
               products.map((product) => <option key={product.id} value={product.id}>{product.name}</option>)}
           </select>

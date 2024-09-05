@@ -22,3 +22,21 @@ body {
   width: 8%;
   min-width: 100px;
 }
+
+/* select product styles */
+.product-select-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.product-select-label{
+  padding-right: 2em;
+  font-weight: bold;
+}
+
+.product-select {
+  padding: 0.5em;
+  padding-right: 15em;
+}
