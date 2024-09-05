@@ -1,6 +1,6 @@
 import '../styles/App.css';
 
-function SelectProduct({ products }) {
+function SelectProduct({ products, productsPrice }) {
 
   // const products = [
   //   { id: 1, name: 'Smaak' },
@@ -8,11 +8,11 @@ function SelectProduct({ products }) {
   //   { id: 3, name: 'Orijen' },
   // ]
 
-  const productsPrice = [
-    { id: 1, price: '42' },
-    { id: 2, price: '51' },
-    { id: 3, price: '48' },
-  ]
+  // const productsPrice = [
+  //   { id: 1, price: '42' },
+  //   { id: 2, price: '51' },
+  //   { id: 3, price: '48' },
+  // ]
 
   //haetaan tuotteen hinta, jotta voidaan näyttää se dropdownissa tuotteen perässä
   const getPrice= (id) => {
@@ -23,7 +23,7 @@ function SelectProduct({ products }) {
   return (
     <div className='content'>
       <div className='product-select-row'>
-        <label className='product-select-label'>Product:</label>
+        <label className='product-select-label'>Select product:</label>
         <div>
           <select className='product-select'>
             {
