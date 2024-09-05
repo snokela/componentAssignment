@@ -2,11 +2,11 @@ import '../styles/App.css';
 
 function SelectProduct() {
 
-  // const products = [
-  //   {id: 1, name: 'Smaak'},
-  //   {id: 2, name: 'Royal Canin'},
-  //   {id: 3, name: 'Orijen'},
-  // ]
+  const products = [
+    { id: 1, name: 'Smaak' },
+    { id: 2, name: 'Royal Canin' },
+    { id: 3, name: 'Orijen' },
+  ]
 
   return (
     <div className='content'>
@@ -14,9 +14,8 @@ function SelectProduct() {
         <label>Product:</label>
         <div>
           <select >
-            <option value="smaak">Smaak</option>
-            <option value="">Royal Canin</option>
-            <option value="">Orijen</option>
+            {
+              products.map((product) => <option key={product.id} value={product.id}>{product.name}</option>)}
           </select>
         </div>
       </div>
