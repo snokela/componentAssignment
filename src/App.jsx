@@ -6,7 +6,7 @@ import SelectProduct from './components/SelectProduct';
 
 function App() {
 
-  const [selectedProductId, setSelectedProductId] = useState('');
+  const [selectedProductId, setSelectedProductId] = useState(0);
 
   const products = [
     { id: 1, name: 'Smaak', size: 6 },
@@ -19,7 +19,6 @@ function App() {
   const selectedProduct = products.find(product => product.id === selectedProductId);
   const productName = selectedProduct ? selectedProduct.name : 'Tuntematon tuote';
   console.log(productName)
-
 
   const productsPrice = [
     { id: 1, price: '38' },
