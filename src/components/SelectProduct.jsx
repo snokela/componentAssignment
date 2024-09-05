@@ -12,7 +12,6 @@ function SelectProduct({ products, productsPrice, selectedProductId, setSelected
     <div className='content'>
       <div className='product-select-row'>
         <label className='product-select-label'>Select product:</label>
-        <div>
           <select
             className='product-select'
             value={selectedProductId}
@@ -24,7 +23,6 @@ function SelectProduct({ products, productsPrice, selectedProductId, setSelected
               </option>
             ))}
           </select>
-        </div>
       </div>
     </div>
   );
