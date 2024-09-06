@@ -9,3 +9,5 @@ function ProductForm() {
     </div>
   )
 }
+
+export default ProductForm;
