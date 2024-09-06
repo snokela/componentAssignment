@@ -3,17 +3,13 @@ import '../styles/App.css';
 function SelectQuantity({ quantity, setQuantity }) {
 
   const handleClickAdded = () => {
-    // console.log("Added one")
     setQuantity(prevQuantity => prevQuantity + 1)
   }
 
   const handleClickReduce = () => {
     if (quantity > 0) {
-      // console.log("Reduced one")
       setQuantity(prevQuantity => prevQuantity - 1)
-    } else {
-      console.log('Määrä ei voi olla pienempi kuin nolla.')
-    };
+    }
   }
 
   return (

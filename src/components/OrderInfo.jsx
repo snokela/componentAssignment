@@ -2,7 +2,7 @@ import '../styles/App.css';
 
 function OrderInfo({ productName, productPrice, quantity }) {
 
-  const sum = productPrice * quantity;
+  const sum = productPrice && quantity ? productPrice * quantity : '';
 
   return (
       <div>
@@ -16,9 +16,9 @@ function OrderInfo({ productName, productPrice, quantity }) {
           </thead>
           <tbody>
             <tr>
-              <td>{productName || ''}</td>
-              <td>{quantity || ''}</td>
-              <td>{sum != '' ? sum + '€' : ''}</td>
+              <td>{(productName && quantity > 0) ? productName : ''}</td>
+              <td>{(quantity > 0 && productName) ? quantity : ''}</td>
+              <td>{sum}</td>
             </tr>
           </tbody>
         </table>

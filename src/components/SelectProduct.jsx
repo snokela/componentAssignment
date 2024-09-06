@@ -10,7 +10,7 @@ function SelectProduct({ productNames, productPrices, selectedIndex, setSelected
           value={selectedIndex}
           onChange={(e) => setSelectedIndex(parseInt(e.target.value))}
         >
-          <option value=''>-- Select product --</option>
+          <option value={-1}>-- Select product --</option>
           {productNames.map((name, index) => (
             <option key={index} value={index}>
               {name} - ({productPrices[index]} €)

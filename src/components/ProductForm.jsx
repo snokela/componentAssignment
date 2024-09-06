@@ -7,9 +7,9 @@ import '../styles/App.css';
 function ProductForm() {
 
   const [selectedIndex, setSelectedIndex] = useState('');
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(1)
 
-  console.log(quantity)
+  // console.log(quantity)
   // console.log(selectedIndex)
 
   const productNames = ['Smaak 6kg', 'Royal Canin 6kg', 'Orijen 7kg', 'Acana 6kg', 'Pedigree 8kg']
@@ -18,9 +18,9 @@ function ProductForm() {
   const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : '';
   const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : '';
 
-  console.log('Valittu tuote: ', selectedproductName)
-  console.log('Valitun tuotteen hinta: ', selectedProductPrice)
-  console.log('Valitun tuotteen määrä: ', quantity)
+  // console.log('Valittu tuote: ', selectedproductName)
+  // console.log('Valitun tuotteen hinta: ', selectedProductPrice)
+  // console.log('Valitun tuotteen määrä: ', quantity)
 
   return (
     <div className='product-form-content'>
