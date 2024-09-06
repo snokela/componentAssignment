@@ -82,6 +82,7 @@ body {
 .orderinfo-table th, .orderinfo-table td {
   padding: 1.2em;
   text-align: left;
+  border: 2px solid black;
 }
 
 /* mediaqueryt isolle näytölle */
