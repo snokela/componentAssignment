@@ -10,6 +10,7 @@ function App() {
   const [selectedIndex, setSelectedIndex] = useState('');
   const [quantity, setQuantity] = useState(0)
 
+  console.log(quantity)
   // console.log(selectedIndex)
 
   const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana', 'Pedigree']
