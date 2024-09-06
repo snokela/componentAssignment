@@ -2,6 +2,7 @@ import { useState } from 'react';
 import headerImg from './assets/headerImg.png';
 import Header from './components/Header';
 import SelectProduct from './components/SelectProduct';
+import SelectQuantity from './components/SelectQuantity';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
       />
+      <SelectQuantity />
     </div>
   );
 }
