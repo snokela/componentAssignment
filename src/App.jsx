@@ -6,9 +6,14 @@ import SelectProduct from './components/SelectProduct';
 
 function App() {
 
-  const [selectedIndex, setSelectedIndex ] = useState(0);
+  const [selectedIndex, setSelectedIndex ] = useState('');
 
   console.log(selectedIndex)
+
+  // const selectedproductName = productNames[selectedIndex]
+  
+  // console.log(selectedproductName)
+
 
   const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana',  'Pedigree']
   const productPrices = ['38', '51', '48', '55',  '30' ]
