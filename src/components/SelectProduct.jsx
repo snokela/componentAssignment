@@ -3,8 +3,7 @@ import '../styles/App.css';
 function SelectProduct({ productNames, productPrices, selectedIndex, setSelectedIndex }) {
 
   return (
-    <div className='content'>
-      <div className='product-select-row'>
+      <div>
         <label className='product-select-label'>Product:</label>
         <select
           className='product-select'
@@ -19,7 +18,6 @@ function SelectProduct({ productNames, productPrices, selectedIndex, setSelected
           ))}
         </select>
       </div>
-    </div>
   );
 }
 

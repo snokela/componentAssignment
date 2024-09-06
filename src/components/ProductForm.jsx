@@ -2,6 +2,7 @@ import { useState } from 'react';
 import SelectProduct from '../components/SelectProduct';
 import SelectQuantity from '../components/SelectQuantity';
 import OrderInfo from '../components/OrderInfo';
+import '../styles/App.css';
 
 function ProductForm() {
 
@@ -22,24 +23,30 @@ function ProductForm() {
   console.log('Valitun tuotteen määrä: ', quantity)
 
   return (
-    <div>
-      <h3>Select Product</h3>
-      <SelectProduct
-        productNames={productNames}
-        productPrices={productPrices}
-        selectedIndex={selectedIndex}
-        setSelectedIndex={setSelectedIndex}
-      />
-      <SelectQuantity
-        quantity={quantity}
-        setQuantity={setQuantity}
-      />
-      <h3>Order info</h3>
-      <OrderInfo
-        productName={selectedproductName}
-        productPrice={selectedProductPrice}
-        quantity={quantity}
-      />
+    <div className='product-form-content'>
+      <div>
+        <h3>Select Product</h3>
+        <div className='product-form-indent'>
+          <SelectProduct
+            productNames={productNames}
+            productPrices={productPrices}
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+          />
+          <SelectQuantity
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
+        </div>
+        <h3>Order info</h3>
+        <div className='product-form-indent'>
+          <OrderInfo
+            productName={selectedproductName}
+            productPrice={selectedProductPrice}
+            quantity={quantity}
+          />
+        </div>
+      </div>
     </div>
   )
 }

@@ -5,7 +5,6 @@ function OrderInfo({ productName, productPrice, quantity }) {
   const sum = productPrice * quantity;
 
   return (
-    <div className="content">
       <div>
         <table className="orderinfo-table">
           <thead>
@@ -24,7 +23,6 @@ function OrderInfo({ productName, productPrice, quantity }) {
           </tbody>
         </table>
       </div>
-    </div>
   );
 }
 

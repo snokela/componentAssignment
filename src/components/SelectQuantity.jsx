@@ -17,7 +17,6 @@ function SelectQuantity({ quantity, setQuantity }) {
   }
 
   return (
-    <div className="content">
       <div className='quantity-select-row'>
         <p className='quantity-select-p'>Quantity:</p>
         <div className='button-row'>
@@ -36,7 +35,6 @@ function SelectQuantity({ quantity, setQuantity }) {
           </button>
         </div>
       </div>
-    </div>
   );
 }
 
