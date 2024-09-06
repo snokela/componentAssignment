@@ -51,6 +51,7 @@ body {
 .quantity-select-row {
   display: flex;
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .button-row {
@@ -66,6 +67,10 @@ body {
   font-size: medium;
   margin: 0.5em;
 }
+
+
+/* orderinfo styles */
+
 
 /* mediaqueryt isolle näytölle */
 @media (min-width: 768px) {
