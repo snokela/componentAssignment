@@ -14,11 +14,11 @@ function App() {
   console.log(quantity)
   // console.log(selectedIndex)
 
-  const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana', 'Pedigree']
+  const productNames = ['Smaak 6kg', 'Royal Canin 6kg', 'Orijen 7kg', 'Acana 6kg', 'Pedigree 8kg']
   const productPrices = [38, 51, 48, 55, 30]
 
-  const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : 'Ei valittu tuotetta';
-  const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : 'Ei hintaa';
+  const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : '';
+  const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : '';
 
   console.log('Valittu tuote: ', selectedproductName)
   console.log('Valitun tuotteen hinta: ', selectedProductPrice)
@@ -40,7 +40,11 @@ function App() {
         quantity={quantity}
         setQuantity={setQuantity}
       />
-      <OrderInfo />
+      <OrderInfo
+        productName={selectedproductName}
+        productPrice={selectedProductPrice}
+        quantity={quantity}
+      />
     </div>
   );
 }
