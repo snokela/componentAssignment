@@ -1,13 +1,13 @@
 import '../styles/App.css';
 
-function SelectQuantity() {
+function SelectQuantity({ quantity, setQuantity }) {
   return (
     <div className="content">
       <div className='quantity-select-row'>
         <p className='quantity-select-p'>Quantity:</p>
         <div className='button-row'>
           <button className='quantity-button'>-</button>
-          <p>kpl</p>
+          <p>{quantity}</p>
           <button className='quantity-button'>+</button>
         </div>
       </div>

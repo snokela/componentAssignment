@@ -43,7 +43,6 @@ body {
 
 .product-select {
   padding: 0.5em;
-  /* width: 100% ;  */
   max-width: 400px;
   padding-right: 15em;
 }
@@ -60,14 +59,13 @@ body {
 
 .quantity-button {
   width: 35px;
-  height: 35px;
+  height: 35gitpx;
   border-radius: 5px;
   border-width: thin;
   font-weight: bolder;
   font-size: medium;
   margin: 0.5em;
 }
-
 
 /* mediaqueryt isolle näytölle */
 @media (min-width: 768px) {

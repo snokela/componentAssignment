@@ -8,6 +8,7 @@ import SelectQuantity from './components/SelectQuantity';
 function App() {
 
   const [selectedIndex, setSelectedIndex] = useState('');
+  const [quantity, setQuantity] = useState(0)
 
   // console.log(selectedIndex)
 
@@ -32,7 +33,10 @@ function App() {
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
       />
-      <SelectQuantity />
+      <SelectQuantity
+        quantity={quantity}
+        setQuantity={setQuantity}
+      />
     </div>
   );
 }
