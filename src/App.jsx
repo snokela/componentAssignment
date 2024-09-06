@@ -6,16 +6,12 @@ import SelectProduct from './components/SelectProduct';
 
 function App() {
 
-  const [selectedIndex, setSelectedIndex ] = useState('');
+  const [selectedIndex, setSelectedIndex] = useState('');
 
   // console.log(selectedIndex)
 
-  const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana',  'Pedigree']
-  const productPrices = [38, 51, 48, 55, 30 ]
-
-  // const selectedProduct = products.find(product => product.id === selectedProductId);
-  // const productName = selectedProduct ? selectedProduct.name : 'Tuntematon tuote';
-  // console.log(productName)
+  const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana', 'Pedigree']
+  const productPrices = [38, 51, 48, 55, 30]
 
   const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : 'Ei valittu tuotetta';
   const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : 'Ei hintaa';
@@ -23,12 +19,11 @@ function App() {
   console.log('Valittu tuote: ', selectedproductName)
   console.log('Valitun tuotteen hinta: ', selectedProductPrice)
 
-
-return (
+  return (
     <div>
       <Header
-       image={headerImg}
-       title={'Welcome to product page!'}
+        image={headerImg}
+        title={'Welcome to product page!'}
       />
       <SelectProduct
         productNames={productNames}
