@@ -21,6 +21,7 @@ function App() {
 
   console.log('Valittu tuote: ', selectedproductName)
   console.log('Valitun tuotteen hinta: ', selectedProductPrice)
+  console.log('Valitun tuotteen määrä: ', quantity)
 
   return (
     <div>
