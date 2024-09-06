@@ -6,7 +6,9 @@ import SelectProduct from './components/SelectProduct';
 
 function App() {
 
-  const [selectedProductId, setSelectedProductId] = useState(0);
+  const [selectedIndex, setSelectedIndex ] = useState(0);
+
+  console.log(selectedIndex)
 
   const productNames = ['Smaak', 'Royal Canin', 'Orijen', 'Acana',  'Pedigree']
   const productPrices = ['38', '51', '48', '55',  '30' ]
@@ -25,8 +27,8 @@ return (
       <SelectProduct
         productNames={productNames}
         productPrices={productPrices}
-        selectedProductId={selectedProductId}
-        setSelectedProductId={setSelectedProductId}
+        selectedIndex={selectedIndex}
+        setSelectedIndex={setSelectedIndex}
       />
     </div>
   );
