@@ -4,7 +4,7 @@ function OrderInfo() {
   return (
     <div className="content">
       <div>
-        <table>
+        <table className="orderinfo-table">
           <thead>
             <tr>
               <th>Product</th>

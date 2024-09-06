@@ -70,7 +70,19 @@ body {
 
 
 /* orderinfo styles */
+.orderinfo-table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  /* width: 450px; */
+  height: auto;
+  margin: 0 auto;
+}
 
+.orderinfo-table th, .orderinfo-table td {
+  padding: 1.2em;
+  text-align: left;
+}
 
 /* mediaqueryt isolle näytölle */
 @media (min-width: 768px) {
