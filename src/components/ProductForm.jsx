@@ -3,6 +3,8 @@ import SelectProduct from '../components/SelectProduct';
 import SelectQuantity from '../components/SelectQuantity';
 import OrderInfo from '../components/OrderInfo';
 import '../styles/App.css';
+import headerImg from '../assets/headerImg.png';
+import Header from '../components/Header';
 
 function ProductForm() {
 
@@ -25,6 +27,10 @@ function ProductForm() {
   return (
     <div className='product-form-content'>
       <div>
+        <Header
+          image={headerImg}
+          title={'Welcome to product page!'}
+        />
         <h3>Select Product</h3>
         <div className='product-form-indent'>
           <SelectProduct

@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 
-/* producformin styles */
+/* componentUI:n styles */
 .product-form-content {
   display: flex;
   flex-direction: column;
@@ -27,17 +27,16 @@ body {
 /* headerin styles */
 .header-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 /* headerin styles */
 .header-img {
   border-radius: 50%;
-  margin: 30px;
+  margin: 1.5em;
   border: 4px solid black;
   height: auto;
-  width: 8%;
+  width: 15%;
   min-width: 100px;
 }
 
@@ -86,7 +85,7 @@ body {
 
 .orderinfo-table th,
 .orderinfo-table td {
-  padding: 1.2em;
+  padding: 1em;
   text-align: left;
   border: 1px solid black;
 }
