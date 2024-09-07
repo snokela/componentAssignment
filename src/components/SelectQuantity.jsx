@@ -1,4 +1,4 @@
-import '../styles/App.css';
+import '../styles/ComponentUI.css';
 
 function SelectQuantity({ quantity, setQuantity }) {
 
