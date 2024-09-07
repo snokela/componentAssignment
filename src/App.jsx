@@ -1,9 +1,9 @@
-import ProductForm from './components/ProductForm';
+import ComponentUI from './components/ComponentUI'
 
 function App() {
   return (
     <div>
-      <ProductForm />
+      <ComponentUI />
     </div>
   );
 }

@@ -1,28 +1,21 @@
 import { useState } from 'react';
-import SelectProduct from '../components/SelectProduct';
-import SelectQuantity from '../components/SelectQuantity';
-import OrderInfo from '../components/OrderInfo';
+import SelectProduct from './SelectProduct';
+import SelectQuantity from './SelectQuantity';
+import OrderInfo from './OrderInfo';
 import '../styles/App.css';
 import headerImg from '../assets/headerImg.png';
-import Header from '../components/Header';
+import Header from './Header';
 
-function ProductForm() {
+function ComponentUI() {
 
   const [selectedIndex, setSelectedIndex] = useState('');
   const [quantity, setQuantity] = useState(1)
-
-  // console.log(quantity)
-  // console.log(selectedIndex)
 
   const productNames = ['Smaak 6kg', 'Royal Canin 6kg', 'Orijen 7kg', 'Acana 6kg', 'Pedigree 8kg']
   const productPrices = [38, 51, 48, 55, 30]
 
   const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : '';
   const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : '';
-
-  // console.log('Valittu tuote: ', selectedproductName)
-  // console.log('Valitun tuotteen hinta: ', selectedProductPrice)
-  // console.log('Valitun tuotteen määrä: ', quantity)
 
   return (
     <div className='product-form-content'>
@@ -57,4 +50,4 @@ function ProductForm() {
   )
 }
 
-export default ProductForm;
+export default ComponentUI;

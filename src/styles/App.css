@@ -27,7 +27,7 @@ body {
 /* headerin styles */
 .header-content {
   display: flex;
-  align-items: center; */
+  align-items: center;
 }
 
 /* headerin styles */
@@ -47,9 +47,8 @@ body {
 }
 
 .product-select {
-  padding: 0.5em;
+  padding: 0.5em 15em 0.5em 0.5em;
   max-width: 400px;
-  padding-right: 15em;
 }
 
 /* select quantity styles */
