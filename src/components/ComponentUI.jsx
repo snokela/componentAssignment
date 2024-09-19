@@ -8,7 +8,7 @@ import Header from './Header';
 
 function ComponentUI() {
 
-  const [selectedIndex, setSelectedIndex] = useState('');
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const [quantity, setQuantity] = useState(1)
 
   const productNames = ['Smaak 6kg', 'Royal Canin 6kg', 'Orijen 7kg', 'Acana 6kg', 'Pedigree 8kg']
@@ -16,6 +16,8 @@ function ComponentUI() {
 
   const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : '';
   const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : '';
+
+  console.log(selectedIndex);
 
   return (
     <div className='product-form-content'>
@@ -37,14 +39,18 @@ function ComponentUI() {
             setQuantity={setQuantity}
           />
         </div>
-        <h3>Order info</h3>
-        <div className='product-form-indent'>
-          <OrderInfo
-            productName={selectedproductName}
-            productPrice={selectedProductPrice}
-            quantity={quantity}
-          />
-        </div>
+        {selectedIndex >= 0 && (
+          <>
+            <h3>Order info</h3>
+            <div className='product-form-indent'>
+              <OrderInfo
+                productName={selectedproductName}
+                productPrice={selectedProductPrice}
+                quantity={quantity}
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   )
