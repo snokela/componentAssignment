@@ -72,6 +72,11 @@ body {
   margin: 0.5em;
 }
 
+/* lisätään buttonille hoveria */
+.active, .quantity-button:hover {
+  background-color: #c7c6c6;
+}
+
 /* orderinfo styles */
 .orderinfo-table {
   border: 1px solid black;
