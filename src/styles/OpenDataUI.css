@@ -39,3 +39,18 @@ body {
   font-weight: bolder;
   font-size: large;
 }
+
+/* lisätään buttonille hoveria */
+.active,
+.random-img-button:hover {
+  background-color: #c7c6c6;
+  /* background-color: #dcc0a0; */
+}
+
+/* isoilla näytöillä suurempi kuva */
+@media (min-width: 768px) {
+  .random-dog-img {
+    height: auto;
+    max-width: 500px;
+  }
+}
