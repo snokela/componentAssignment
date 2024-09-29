@@ -35,7 +35,7 @@ function OpenDataUI() {
         image={headerImg}
         title={'Discover a Random Dog Image!'}
       />
-        <RandomImageView
+      <RandomImageView
         randomImg={randomImg}
       />
     </div>
@@ -47,8 +47,13 @@ export default OpenDataUI;
 // funktio, joka näyttää randomin kuvan
 function RandomImageView({ randomImg }) {
   return (
-      <div className='dog-image-container'>
-          <img src={randomImg} alt='Random dog' className='random-dog-img' />
-      </div>
+    <div className='dog-image-container'>
+      {/* ehdollinen renderöinti, lukee Loading..kunnes kuva haettu*/}
+      {randomImg ? (
+        <img src={randomImg} alt='Random dog' className='random-dog-img' />
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
   );
 }
