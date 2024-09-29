@@ -43,8 +43,8 @@ function OpenDataUI() {
       />
       <RandomImageView
         randomImg={randomImg}
+        breed={breed}
       />
-      <p>{breed}</p>
       <RandomImageButton
         title={'Get random image'}
         handleClick={fetchRandomImage}
@@ -56,16 +56,19 @@ function OpenDataUI() {
 export default OpenDataUI;
 
 // funktiokomponentti, joka näyttää randomin kuvan
-function RandomImageView({ randomImg }) {
+function RandomImageView({ randomImg, breed }) {
   return (
-    <div className='dog-image-container'>
-      {/* ehdollinen renderöinti, lukee Loading..kunnes kuva haettu*/}
-      {randomImg ? (
-        <img src={randomImg} alt='Random dog' className='random-dog-img' />
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+    <>
+      <div className='dog-image-container'>
+        {/* ehdollinen renderöinti, lukee Loading..kunnes kuva haettu*/}
+        {randomImg ? (
+          <img src={randomImg} alt='Random dog' className='random-dog-img' />
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
+      <p>{breed}</p>
+    </>
   );
 }
 
