@@ -13,7 +13,7 @@ function OpenDataUI() {
 
   const [randomImg, setRandomImg] = useState('');
   const [breed, setBreed] = useState('');
-  
+
   // funktio joka noutaa randomin kuvan rajapinnasta
   const fetchRandomImage = () => {
     axios.get(baseURL)
@@ -21,6 +21,11 @@ function OpenDataUI() {
         // randomisti haetun kuvan url
         const randomImgURL = resp.data.message
         setRandomImg(resp.data.message);
+
+        // puretaan rotu URL:sta ja asetetaan se omaan tilaan
+        const parts = randomImgURL.split('/');
+        const breedName = (parts[4].replace("-", " ")).toUpperCase()
+        setBreed(breedName)
       })
       .catch(e => console.log(e.message));
   }
@@ -39,6 +44,7 @@ function OpenDataUI() {
       <RandomImageView
         randomImg={randomImg}
       />
+      <p>{breed}</p>
       <RandomImageButton
         title={'Get random image'}
         handleClick={fetchRandomImage}
