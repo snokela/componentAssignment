@@ -1,9 +1,11 @@
-import ComponentUI from './components/ComponentUI'
+import ComponentUI from './components/ComponentUI';
+import OpenDataUI from './components/OpenDataUI';
 
 function App() {
   return (
     <div>
       <ComponentUI />
+      <OpenDataUI />
     </div>
   );
 }
