@@ -38,13 +38,17 @@ function OpenDataUI() {
       <RandomImageView
         randomImg={randomImg}
       />
+      <RandomImageButton
+        title={'Get random image'}
+        handleClick={fetchRandomImage}
+      />
     </div>
   );
 }
 
 export default OpenDataUI;
 
-// funktio, joka näyttää randomin kuvan
+// funktiokomponentti, joka näyttää randomin kuvan
 function RandomImageView({ randomImg }) {
   return (
     <div className='dog-image-container'>
@@ -55,5 +59,12 @@ function RandomImageView({ randomImg }) {
         <p>Loading...</p>
       )}
     </div>
+  );
+}
+
+// Buttonkomponentti
+function RandomImageButton({ title, handleClick }) {
+  return (
+    <button className='random-img-button' onClick={handleClick}>{title}</button>
   );
 }
