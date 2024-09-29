@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/OpenDataUI.css';
+import Header from './Header';
+import headerImg from '../assets/secondHeaderImg.png';
 
 
 // api-osoite
@@ -22,6 +24,10 @@ function OpenDataUI() {
 
   return (
     <div className='open-data-content'>
+      <Header
+        image={headerImg}
+        title={'Discover a Random Dog Image!'}
+      />
        <img src={randomImg} alt='Random dog' className='random-dog-img' />
     </div>
   );
