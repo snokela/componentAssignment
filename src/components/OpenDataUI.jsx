@@ -4,8 +4,6 @@ import Header from './Header';
 import headerImg from '../assets/secondHeaderImg.png';
 import axios from 'axios';
 
-
-
 // api-osoite
 const baseURL = 'https://dog.ceo/api/breeds/image/random'
 
@@ -55,7 +53,7 @@ function OpenDataUI() {
 
 export default OpenDataUI;
 
-// funktiokomponentti, joka näyttää randomin kuvan
+// funktiokomponentti randomisti haetun kuvan näyttämiseksi
 function RandomImageView({ randomImg, breed }) {
   return (
     <>
@@ -72,7 +70,7 @@ function RandomImageView({ randomImg, breed }) {
   );
 }
 
-// Buttonkomponentti
+// Buttonkomponentti, uuden kuvan valitsemiseksi
 function RandomImageButton({ title, handleClick }) {
   return (
     <button className='random-img-button' onClick={handleClick}>{title}</button>
