@@ -12,7 +12,8 @@ const baseURL = 'https://dog.ceo/api/breeds/image/random'
 function OpenDataUI() {
 
   const [randomImg, setRandomImg] = useState('');
-
+  const [breed, setBreed] = useState('');
+  
   // funktio joka noutaa randomin kuvan rajapinnasta
   const fetchRandomImage = () => {
     axios.get(baseURL)
