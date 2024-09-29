@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import '../styles/OpenDataUI.css';
 import Header from './Header';
 import headerImg from '../assets/secondHeaderImg.png';
+import axios from 'axios';
+
 
 
 // api-osoite
@@ -22,13 +24,18 @@ function OpenDataUI() {
       .catch(e => console.log(e.message));
   }
 
+  // haetaan random kuva, kun komponentti ladataan
+  useEffect(() => {
+    fetchRandomImage()
+  }, []);
+
   return (
     <div className='open-data-content'>
       <Header
         image={headerImg}
         title={'Discover a Random Dog Image!'}
       />
-       <img src={randomImg} alt='Random dog' className='random-dog-img' />
+      <img src={randomImg} alt='Random dog' className='random-dog-img' />
     </div>
   );
 }
