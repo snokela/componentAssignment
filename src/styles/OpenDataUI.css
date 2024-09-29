@@ -12,3 +12,21 @@ body {
   align-items: center;
   text-align: left;
 }
+
+.dog-image-container {
+  border-style: groove;
+  border-color: #d5d9bb;
+  border-radius: 4px;
+  background-color: #d5d9bb;
+  padding: 2em;
+  max-width: 70%;
+  margin-top: 2em;
+}
+
+.random-dog-img {
+  height: auto;
+  /* width: 500px; */
+  max-width: 100%;
+  border-radius: 4px;
+  /* object-fit: cover; */
+}
