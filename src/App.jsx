@@ -1,11 +1,12 @@
 import { createBrowserRouter, Link, Outlet, RouterProvider, } from 'react-router-dom';
 import ComponentUI from './components/ComponentUI';
 import OpenDataUI from './components/OpenDataUI';
+import './styles/App.css';
 
 
 const NavigationBar = () => {
   return (
-    <div>
+    <div className='navigationBar'>
       <Link to={'/'}>Component assignment</Link>
       <Link to={'/randomDog'}>Open data assignment</Link>
       <Outlet />
@@ -32,7 +33,7 @@ const myRouter = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <div className='app-content'>
       <RouterProvider router={myRouter} />
       {/* <ComponentUI />
       <OpenDataUI /> */}
