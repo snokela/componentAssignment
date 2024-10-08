@@ -12,25 +12,27 @@ function OpenDataUI() {
   const [randomImg, setRandomImg] = useState('');
   const [breed, setBreed] = useState('');
 
-  // funktio joka noutaa randomin kuvan rajapinnasta
+  // // funktio joka noutaa randomin kuvan rajapinnasta
   const fetchRandomImage = () => {
     axios.get(baseURL)
       .then(resp => {
         // randomisti haetun kuvan url
         const randomImgURL = resp.data.message
-        setRandomImg(resp.data.message);
+        setRandomImg(randomImgURL);
 
         // puretaan rotu URL:sta ja asetetaan se omaan tilaan
         const parts = randomImgURL.split('/');
-        const breedName = (parts[4].replace("-", " ")).toUpperCase()
-        setBreed(breedName)
+        const breedName = (parts[4].replace("-", " ")).toUpperCase();
+        setBreed(breedName);
       })
+      // mikäli kuvaa ei esim.löydy
       .catch(e => console.log(e.message));
   }
 
   // haetaan random kuva, kun komponentti ladataan
   useEffect(() => {
-    fetchRandomImage()
+    console.log('*******');
+    fetchRandomImage();
   }, []);
 
   return (
@@ -54,7 +56,7 @@ function OpenDataUI() {
 export default OpenDataUI;
 
 // funktiokomponentti randomisti haetun kuvan näyttämiseksi
-function RandomImageView({ randomImg, breed }) {
+const RandomImageView = ({ randomImg, breed }) => {
   return (
     <>
       <div className='dog-image-container'>
@@ -71,7 +73,7 @@ function RandomImageView({ randomImg, breed }) {
 }
 
 // Buttonkomponentti, uuden kuvan valitsemiseksi
-function RandomImageButton({ title, handleClick }) {
+const RandomImageButton = ({ title, handleClick }) => {
   return (
     <button className='random-img-button' onClick={handleClick}>{title}</button>
   );
