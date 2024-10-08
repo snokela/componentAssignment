@@ -18,7 +18,7 @@ function OrderInfo({ productName, productPrice, quantity }) {
             <tr>
               <td>{(productName && quantity > 0) ? productName : ''}</td>
               <td>{(quantity > 0 && productName) ? quantity : ''}</td>
-              <td>{sum}</td>
+              <td>{sum} €</td>
             </tr>
           </tbody>
         </table>
