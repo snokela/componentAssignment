@@ -35,8 +35,6 @@ function App() {
   return (
     <div className='app-content'>
       <RouterProvider router={myRouter} />
-      {/* <ComponentUI />
-      <OpenDataUI /> */}
     </div>
   );
 }
