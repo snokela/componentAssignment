@@ -1,13 +1,14 @@
 .navigationBar a {
-  color: #757767;
+  color: #65665f;
   text-decoration: none;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   padding: 15px;
   transition: 0.3s;
 }
 
 .navigationBar a:hover {
   color: black;
+  text-decoration: underline;
 }
 
 .app-content {
