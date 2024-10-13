@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import SelectProduct from './SelectProduct';
-import SelectQuantity from './SelectQuantity';
 import OrderInfo from './OrderInfo';
 import '../styles/ComponentUI.css';
 import headerImg from '../assets/componentHeaderImg.png';
