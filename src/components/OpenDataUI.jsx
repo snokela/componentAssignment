@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/OpenDataUI.css';
 import Header from './Header';
-import headerImg from '../assets/secondHeaderImg.png';
+import headerImg from '../assets/openDataHeaderImg.png';
 import axios from 'axios';
 
 // api-osoite
