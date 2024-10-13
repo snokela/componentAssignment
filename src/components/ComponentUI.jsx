@@ -26,7 +26,6 @@ function ComponentUI() {
           image={headerImg}
           title={'Welcome to product page!'}
         />
-        <h3>Select Product</h3>
         <div className='product-form-indent'>
           <SelectProduct
             productNames={productNames}
@@ -41,7 +40,6 @@ function ComponentUI() {
         </div>
         {selectedIndex >= 0 && (
           <>
-            <h3>Order info</h3>
             <div className='product-form-indent'>
               <OrderInfo
                 productName={selectedproductName}

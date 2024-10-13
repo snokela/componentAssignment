@@ -6,6 +6,7 @@ function OrderInfo({ productName, productPrice, quantity }) {
 
   return (
       <div>
+        <h3>Order info</h3>
         <table className="orderinfo-table">
           <thead>
             <tr>
