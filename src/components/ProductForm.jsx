@@ -1,5 +1,3 @@
-// import SelectProduct from "./SelectProduct";
-// import SelectQuantity from "./SelectQuantity";
 import '../styles/ComponentUI.css';
 
 const ProductForm = ({
@@ -52,7 +50,7 @@ const SelectProduct = ({ productNames, productPrices, selectedIndex, setSelected
 }
 
 // function for quantity selection
-const SelectQuantity = ({ quantity, setQuantity })  => {
+const SelectQuantity = ({ quantity, setQuantity }) => {
 
   const handleClickAdded = () => {
     setQuantity(prevQuantity => prevQuantity + 1)
@@ -65,23 +63,23 @@ const SelectQuantity = ({ quantity, setQuantity })  => {
   }
 
   return (
-      <div className='quantity-select-row'>
-        <p className='quantity-select-p'>Quantity:</p>
-        <div className='button-row'>
-          <button
-            onClick={handleClickReduce}
-            className='quantity-button'
-          >
-            -
-          </button>
-          <p>{quantity}</p>
-          <button
-            onClick={handleClickAdded}
-            className='quantity-button'
-          >
-            +
-          </button>
-        </div>
+    <div className='quantity-select-row'>
+      <p className='quantity-select-p'>Quantity:</p>
+      <div className='button-row'>
+        <button
+          onClick={handleClickReduce}
+          className='quantity-button'
+        >
+          -
+        </button>
+        <p>{quantity}</p>
+        <button
+          onClick={handleClickAdded}
+          className='quantity-button'
+        >
+          +
+        </button>
       </div>
+    </div>
   );
 }
