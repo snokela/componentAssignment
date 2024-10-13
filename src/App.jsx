@@ -14,10 +14,11 @@ const NavigationBar = () => {
   );
 }
 
+
 const myRouter = createBrowserRouter([
   {
     path: '/',
-    element: <NavigationBar />,
+    element: <Layout />,
     children: [
       {
         path: '/',
@@ -40,5 +41,3 @@ function App() {
 }
 
 export default App;
-
-
