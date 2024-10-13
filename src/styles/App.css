@@ -1,7 +1,8 @@
 .navigationBar a {
+  display: inline-block;
   color: #65665f;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px;
   transition: 0.3s;
 }
 
@@ -12,4 +13,10 @@
 
 .app-content {
   padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .navigationBar a {
+    padding: 20px;
+  }
 }
