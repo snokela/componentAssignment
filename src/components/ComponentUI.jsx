@@ -17,8 +17,6 @@ function ComponentUI() {
   const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : '';
   const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : '';
 
-  // console.log(selectedIndex);
-
   return (
     <div className='product-form-content'>
       <div>

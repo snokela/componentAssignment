@@ -4,7 +4,7 @@ import Header from './Header';
 import headerImg from '../assets/openDataHeaderImg.png';
 import axios from 'axios';
 
-// api-osoite
+// API-url
 const baseURL = 'https://dog.ceo/api/breeds/image/random'
 
 function OpenDataUI() {
@@ -12,26 +12,24 @@ function OpenDataUI() {
   const [randomImg, setRandomImg] = useState('');
   const [breed, setBreed] = useState('');
 
-  // // funktio joka noutaa randomin kuvan rajapinnasta
+  // function that fetches a random image from the API
   const fetchRandomImage = () => {
     axios.get(baseURL)
       .then(resp => {
-        // randomisti haetun kuvan url
+        // URL of the randomly fetched image
         const randomImgURL = resp.data.message
         setRandomImg(randomImgURL);
 
-        // puretaan rotu URL:sta ja asetetaan se omaan tilaan
+        // extract the breed from the URL and set it to its own state
         const parts = randomImgURL.split('/');
         const breedName = (parts[4].replace("-", " ")).toUpperCase();
         setBreed(breedName);
       })
-      // mikäli kuvaa ei esim.löydy
       .catch(e => console.log(e.message));
   }
 
-  // haetaan random kuva, kun komponentti ladataan
+  // fetch a random image when the component loads
   useEffect(() => {
-    console.log('*******');
     fetchRandomImage();
   }, []);
 
@@ -55,12 +53,11 @@ function OpenDataUI() {
 
 export default OpenDataUI;
 
-// funktiokomponentti randomisti haetun kuvan näyttämiseksi
+// randomImageView component to display the randomly fetched image
 const RandomImageView = ({ randomImg, breed }) => {
   return (
     <>
       <div className='dog-image-container'>
-        {/* ehdollinen renderöinti, lukee Loading..kunnes kuva haettu*/}
         {randomImg ? (
           <img src={randomImg} alt='Random dog' className='random-dog-img' />
         ) : (
@@ -72,7 +69,7 @@ const RandomImageView = ({ randomImg, breed }) => {
   );
 }
 
-// Buttonkomponentti, uuden kuvan valitsemiseksi
+// Button component to select a new image
 const RandomImageButton = ({ title, handleClick }) => {
   return (
     <button className='random-img-button' onClick={handleClick}>{title}</button>

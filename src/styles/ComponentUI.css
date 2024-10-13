@@ -1,5 +1,5 @@
 /* F7F1E0 background-color */
-/* image lähde: ChatGPT */
+/* images source: ChatGPT */
 body {
   margin: 0;
   padding: 0;
@@ -8,13 +8,11 @@ body {
   min-height: 100vh;
 }
 
-/* componentUI:n styles */
+/* componentUI styles */
 .product-form-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
-  /* margin-top: 25px; */
 }
 
 .product-form-indent {
@@ -26,13 +24,13 @@ body {
   margin-bottom: 2em;
 }
 
-/* headerin styles */
+/* header styles */
 .header-content {
   display: flex;
   align-items: center;
 }
 
-/* headerin styles */
+/* header styles */
 .header-img {
   border-radius: 50%;
   margin: 1.5em;
@@ -74,7 +72,7 @@ body {
   margin: 0.5em;
 }
 
-/* lisätään buttonille hoveria */
+/* add hoveria for button*/
 .active, .quantity-button:hover {
   background-color: #c7c6c6;
 }
@@ -96,7 +94,7 @@ body {
   border: 1px solid black;
 }
 
-/* isoilla näytöillä sisennys suurempi */
+/* on larger screens the indentation is increased */
 @media (min-width: 768px) {
   .product-form-indent {
     margin-left: 2em;
