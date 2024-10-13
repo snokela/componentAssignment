@@ -3,7 +3,7 @@ import SelectProduct from './SelectProduct';
 import SelectQuantity from './SelectQuantity';
 import OrderInfo from './OrderInfo';
 import '../styles/ComponentUI.css';
-import headerImg from '../assets/headerImg.png';
+import headerImg from '../assets/componentHeaderImg.png';
 import Header from './Header';
 
 function ComponentUI() {
@@ -17,7 +17,7 @@ function ComponentUI() {
   const selectedproductName = selectedIndex !== '' ? productNames[selectedIndex] : '';
   const selectedProductPrice = selectedIndex !== '' ? productPrices[selectedIndex] : '';
 
-  console.log(selectedIndex);
+  // console.log(selectedIndex);
 
   return (
     <div className='product-form-content'>
@@ -26,7 +26,6 @@ function ComponentUI() {
           image={headerImg}
           title={'Welcome to product page!'}
         />
-        <h3>Select Product</h3>
         <div className='product-form-indent'>
           <SelectProduct
             productNames={productNames}
@@ -41,7 +40,6 @@ function ComponentUI() {
         </div>
         {selectedIndex >= 0 && (
           <>
-            <h3>Order info</h3>
             <div className='product-form-indent'>
               <OrderInfo
                 productName={selectedproductName}

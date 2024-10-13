@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f1e0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+}
+
+.open-data-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  /* margin-top: 25px; */
+}
+
+.dog-image-container {
+  border-style: groove;
+  border-color: #d5d9bb;
+  border-radius: 4px;
+  background-color: #d5d9bb;
+  padding: 2em;
+  max-width: 70%;
+  margin-top: 2em;
+}
+
+.random-dog-img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.random-img-button {
+  margin-top: 2em;
+  padding: 1em 2.5em 1em 2.5em;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.active,
+.random-img-button:hover {
+  background-color: #c7c6c6;
+}
+
+/* isoilla näytöillä suurempi kuva */
+@media (min-width: 768px) {
+  .random-dog-img {
+    height: auto;
+    max-width: 500px;
+  }
+}
