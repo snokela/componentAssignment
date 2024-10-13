@@ -5,6 +5,7 @@ import OrderInfo from './OrderInfo';
 import '../styles/ComponentUI.css';
 import headerImg from '../assets/componentHeaderImg.png';
 import Header from './Header';
+import ProductForm from './ProductForm';
 
 function ComponentUI() {
 
@@ -25,13 +26,11 @@ function ComponentUI() {
           title={'Welcome to product page!'}
         />
         <div className='product-form-indent'>
-          <SelectProduct
+          <ProductForm
             productNames={productNames}
             productPrices={productPrices}
             selectedIndex={selectedIndex}
             setSelectedIndex={setSelectedIndex}
-          />
-          <SelectQuantity
             quantity={quantity}
             setQuantity={setQuantity}
           />
