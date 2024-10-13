@@ -1,13 +1,13 @@
 import '../styles/ComponentUI.css';
 
-const ProductForm = ({
+function ProductForm({
   productNames,
   productPrices,
   selectedIndex,
   setSelectedIndex,
   quantity,
   setQuantity
-}) => {
+}) {
   return (
     <>
       <SelectProduct
