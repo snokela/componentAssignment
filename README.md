@@ -1,4 +1,8 @@
-# Project Overview #
+## Published Demo
+You can view the live version of the Product Page (Component-Based) assignment here:
+[Dynamic Web Page Component Assignment](https://www.students.oamk.fi/~n3nosa00/DynamicWebPage_ComponentAssignment/)
+
+## Project Overview 
 This project is part of my Dynamic Web Page course and consists of three main assignments:
 
 ### 1. Product Page (Component-Based)
