@@ -33,7 +33,7 @@ function ComponentUI() {
             setQuantity={setQuantity}
           />
         </div>
-        {selectedIndex >= 0 && (
+        {selectedIndex >= 0 && quantity > 0 && (
           <>
             <div className='product-form-indent'>
               <OrderInfo

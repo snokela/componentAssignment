@@ -1,4 +1,4 @@
-import { createBrowserRouter, Link, Outlet, RouterProvider, } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import ComponentUI from './components/ComponentUI';
 import OpenDataUI from './components/OpenDataUI';
 import './styles/App.css';
